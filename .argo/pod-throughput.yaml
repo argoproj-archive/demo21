@@ -1,0 +1,67 @@
+---
+type: workflow
+version: 1
+name: pod100
+description: spin up a lot of pods
+
+steps:
+- step00:
+    template: pod10
+  step10:
+    template: pod10
+  step20:
+    template: pod10
+  step30:
+    template: pod10
+  step40:
+    template: pod10
+  step50:
+    template: pod10
+  step60:
+    template: pod10
+  step70:
+    template: pod10
+  step80:
+    template: pod10
+  step90:
+    template: pod10
+
+---
+type: workflow
+version: 1
+name: pod10
+
+steps:
+- step0:
+    template: pod1
+  step1:
+    template: pod1
+  step2:
+    template: pod1
+  step3:
+    template: pod1
+  step4:
+    template: pod1
+  step5:
+    template: pod1
+  step6:
+    template: pod1
+  step7:
+    template: pod1
+  step8:
+    template: pod1
+  step9:
+    template: pod1
+
+---
+type: container
+version: 1
+name: pod1
+description: spin up a pod
+
+image: alpine:latest
+command: ["sh",  "-c", "exit 0"]
+
+resources:
+  mem_mib: 32
+  cpu_cores: 0.01

@@ -1,0 +1,15 @@
+---
+type: workflow
+version: 1
+name: hello-world
+description: Hello World!
+
+inputs:
+
+outputs:
+
+steps:
+- HELLO-WORLD:
+   image: alpine:latest
+   command: ["sh", "-c"]
+   args: ["echo Hello World!"]
